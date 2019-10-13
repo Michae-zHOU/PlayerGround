@@ -19,3 +19,6 @@ class PriorityQueue:
             return heapq.heappop(self.heap)
         except Exception:
             raise Exception
+
+    def clean(self):
+        self.heap.clear()
