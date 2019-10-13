@@ -31,6 +31,7 @@ class AlgorithmBase:
         if not self.is_test_avail():
             raise Exception("No available test present.")
 
+        print_space_helper()
         print("Algorithm:["+str(self)+"] is running")
         test_idx = 1
         for test_case in self.test_cases:
@@ -40,6 +41,7 @@ class AlgorithmBase:
             test_idx += 1
         print_dash_helper()
         print("Algorithm: ["+str(self)+"] is completed")
+        print_space_helper()
 
     def inject_algorithm(self, func):
         self.algorithm_func = func
