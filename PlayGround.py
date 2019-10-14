@@ -8,7 +8,7 @@ class PlayGround:
         self.algorithm_map = QuestionHubFactory().get_question_map()
 
     def build(self, question):
-        self.algorithm = self.algorithm_map.get(question)()
+        self.algorithm = self.algorithm_map.get(question)
 
     def run(self, callback):
         self.algorithm.submit_algorithm(callback)
